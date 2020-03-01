@@ -22,7 +22,6 @@ class App extends Component {
     this.setState({ showPersons: !doesShow })
   }
   deletePersonHandler = (personIndex) => {
-    // const persons = this.state.persons;
     const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
     this.setState({ persons: persons })
@@ -81,14 +80,7 @@ class App extends Component {
         </div>
       )
     }
-    // const charlist = this.state.userInput.split('').map((char, index) => {
-    //   return <CharComponent
-    //     character={char}
-    //     key={index}
-    //     clicked={() => this.deleteCharHandler(index)
 
-    //     } />
-    // })
 
     return (
 
@@ -99,13 +91,7 @@ class App extends Component {
           style={style}
           onClick={this.togglePersonsHandler} >Switch Name</button>
         {persons}
-        {/* <input
-          type="text"
-          onChange={this.inputChangeHandler}
-          value={this.state.userInput} />
-        <p>{this.state.userInput}</p>
-        <Validation inputLength={this.state.userInput.length} />
-        {charlist} */}
+
       </div>
 
     );
